@@ -1,0 +1,468 @@
+/* VARS */
+:root{
+  --color--01:#f7f7f7;
+  --color--02:rgb(150, 137, 137);
+  --color--03:rgb(53, 53, 53);
+  --color--04:rgb(255, 0, 0);
+}
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+.whatsapp-button {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5d;
+}
+
+.banner {
+  width: 100%;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ff3c3c, #c40000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+  gap: 30px;
+}
+
+.banner_content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.banner_content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.banner_content span {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.banner_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.banner_buttons button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn_baner_button_orcamento {
+  background-color: #fff;
+  border: none;
+  color: #c40000;
+}
+
+.btn_baner_button_orcamento:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
+}
+
+.btn_baner_button_servicos {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn_baner_button_servicos:hover {
+  background-color: #fff;
+  color: #c40000;
+  transform: translateY(-2px);
+}
+
+
+.servicos {
+  min-height: 80vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color--01);
+}
+
+.servicos_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.servicos h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.servicos h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+
+.subtitle_servicos {
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 500;
+  color: #3e3e3e;
+  max-width: 800px;
+}
+
+.servicos_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.servicos_card {
+  width: 300px;
+  height: 370px;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    0 8px 16px rgba(0, 0, 0, 0.08),
+    0 16px 32px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.servicos_card:hover,
+.servicos_card:focus {
+  transform: scale(1.03);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.servicos_card:focus {
+  border: 2px solid #25D366;
+}
+
+#icon_card_primary {
+  background-color: #1ebe5d;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.servicos_card h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #222;
+}
+
+#subtitle_card {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: justify;
+  color: #444;
+}
+
+.servicos_card p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgb(76, 76, 76);
+  margin: 0;
+}
+
+.servicos_card p i {
+  color: #25D366;
+  font-size: 1rem;
+  font-weight: 600;
+}
+section.orcamento{
+  height: auto;
+  background-color: var(--color--01);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px ;
+}
+form h2 {
+margin-bottom: 100px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  position: relative;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ gap: 10px;
+}
+
+form h2::after {
+
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background-color: red;
+  border-radius: 2px;
+}
+.orcamento span {
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 500;
+  color: #3e3e3e;
+  max-width: 800px;
+}
+.section_img_form{
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  
+  flex-wrap: wrap;
+
+}
+.section_img_form img{
+  width: 600px;
+  height: 650px;
+  background: linear-gradient(to right, red, rgb(170, 11, 11));
+  border-radius: 0px 14px 14px 0px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+}
+.form-orcamento {
+  max-width: 500px;
+  height: 650px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 10px 0px 0px 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-orcamento h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.form-group label i {
+  margin-right: 8px;
+  color: #ff0000;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 5px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.buttons_form {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-orcamento-form {
+  background: linear-gradient(135deg, #ff0000, #b30000);
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-orcamento-form i {
+  margin-right: 8px;
+}
+
+.btn-orcamento-form:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(172, 6, 6, 0.5);
+}
+.sobre_nos_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: var(--color--01);
+  gap: 40px;
+}
+.sobre_nos_content .div_group_images_sobre_nos img{
+  width: 100%;
+ 
+}
+.div_group_text_sobre_nos h2{
+margin-bottom: 40px;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: start;
+  margin-left: 10px;
+  color: #333;
+
+ 
+}
+.div_group_text_sobre_nos h2 span{
+
+font-size: 3rem;
+  font-weight: 700;
+  margin-left: 10px;
+  color: #ff0606;
+}
+p {
+  margin-left: 10px;
+  text-align: justify;
+}
+.subtitle_sobre_nos  {
+  font-size: 1.25rem;
+text-align: justify !important;
+  font-weight: 500;
+  color: #3e3e3e;
+  width: 600px;
+}
+
+    .grafico-container {
+     width:100%;
+      margin: auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .barra {
+      margin: 20px 0;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #444;
+    }
+
+    .label i {
+      color: #007bff;
+    }
+
+    .progress {
+      background: #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 30px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      color: #fff;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 30px;
+      font-weight: bold;
+      transition: width 2s ease;
+    }
+
+    div.clientes{ background: #22c949; }
+    div.entregas{ background: #007bff; }
+    div.coletas{ background: #ffc107; }

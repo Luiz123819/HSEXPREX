@@ -1,0 +1,90 @@
+/* ============================
+   MEDIA QUERIES ESSENCIAIS
+============================= */
+
+/* Telas grandes: desktops acima de 1200px */
+@media screen and (min-width: 1200px) {
+  /* Layout amplo, fontes maiores, espaçamento generoso */
+  
+}
+
+/* Telas médias: laptops e tablets em paisagem (entre 992px e 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* Ajustes para largura intermediária */
+}
+
+/* Telas pequenas: tablets em retrato e celulares grandes (entre 768px e 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Redução de fontes, reorganização de colunas */
+  *{
+    font-size: 17px;
+  }
+   .section_img_form{
+    flex-direction: column-reverse;
+   }
+  form{
+    width: 100% !important;
+    border-radius: 10px !important;
+
+  }
+  .section_img_form img{
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 0;
+    border-radius: 10px;
+
+  }
+}
+
+/* Telas muito pequenas: celulares padrão (até 767px) */
+@media screen and (max-width: 767px) {
+  /* Menu mobile, empilhamento de elementos, botões maiores */
+  *{
+    font-size: 17px;
+  }
+   .section_img_form{
+    flex-direction: column-reverse;
+  
+   }
+  form{
+    max-width: 600px !important;
+    border-radius: 10px !important;
+  }
+  form h2{
+    font-size: 26px !important;
+  }
+   .section_img_form img{
+    max-width: 380px;
+    border-radius: 10px ;
+   }
+   .sobre_nos_content{
+    padding: 20px;
+   }
+   .sobre_nos_content .div_group_images_sobre_nos img{
+  width: 100%;
+  height: 150px;
+ 
+}
+   .div_group_text_sobre_nos h2{
+    font-size: 2.5rem;
+    text-align: justify;
+    width: 100%;
+   }
+   .div_group_text_sobre_nos h2 span{
+    font-size: 2.5rem;
+   }
+   .subtitle_sobre_nos{
+    font-size: 18px;
+   }
+}
+
+/* Telas extra pequenas: celulares compactos (até 480px) */
+@media screen and (max-width: 480px) {
+  /* Fontes menores, imagens otimizadas, layout vertical */
+}
+
+/* Telas mínimas: dispositivos muito estreitos (até 320px) */
+@media screen and (max-width: 320px) {
+  /* Ajustes extremos para acessibilidade e legibilidade */
+}
