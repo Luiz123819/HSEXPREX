@@ -11,6 +11,9 @@ padding: 0;
 box-sizing: border-box;
 font-family: Arial, Helvetica, sans-serif;
 }
+.container{
+  background-color: var(--color--01);
+}
 .whatsapp-button {
   position: fixed;
   bottom: 50px;
@@ -49,6 +52,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .banner_content {
+  margin-top: 80px;
   max-width: 800px;
   display: flex;
   flex-direction: column;
@@ -420,6 +424,7 @@ text-align: justify !important;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
+     margin-bottom: 30px;
     }
 
     h2 {
@@ -466,3 +471,72 @@ text-align: justify !important;
     div.clientes{ background: #22c949; }
     div.entregas{ background: #007bff; }
     div.coletas{ background: #ffc107; }
+
+
+    .hs-section {
+      padding: 60px 20px;
+     
+    }
+
+    .hs-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .hs-text {
+      flex: 1 1 500px;
+      padding: 40px;
+    }
+
+    .hs-text h2 {
+      font-size: 2.8em;
+      text-align: start;
+      color: rgb(50, 50, 50);
+      margin-bottom: 20px;
+      border-left: 6px solid #b81313;
+      padding-left: 12px;
+      font-weight: 700;
+    }
+
+    .hs-text p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .hs-text ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hs-text ul li {
+      font-size: 1em;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hs-text ul li i {
+      color: red;
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+
+    .hs-image {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .hs-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+     
+    }

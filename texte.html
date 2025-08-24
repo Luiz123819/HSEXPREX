@@ -1,101 +1,103 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Gráfico de Pizza - Transportadora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HS EXPREX TRANSPORTES</title>
+  <!-- Link do Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .hs-section {
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+
+    .hs-container {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .hs-text {
+      flex: 1 1 500px;
       padding: 40px;
     }
 
-    h2 {
-      color: #333;
+    .hs-text h2 {
+      font-size: 2.8em;
+      color: #1a1a1a;
       margin-bottom: 20px;
+      border-left: 6px solid #007bff;
+      padding-left: 12px;
     }
 
-    canvas {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    .hs-text p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 25px;
     }
 
-    .legenda {
-      margin-top: 20px;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
+    .hs-text ul {
+      list-style: none;
+      padding: 0;
     }
 
-    .item {
+    .hs-text ul li {
+      font-size: 1em;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-weight: bold;
-      color: #444;
     }
 
-    .cor {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
+    .hs-text ul li i {
+      color: #007bff;
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+
+    .hs-image {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .hs-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-left: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      .hs-container {
+        flex-direction: column;
+      }
+
+      .hs-text, .hs-image {
+        padding: 20px;
+      }
+
+      .hs-text h2 {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
 <body>
-  <h2>Indicadores da Transportadora</h2>
-  <canvas id="graficoPizza" width="300" height="300"></canvas>
 
-  <div class="legenda">
-    <div class="item"><div class="cor" style="background:#28a745;"></div>Clientes Satisfeitos</div>
-    <div class="item"><div class="cor" style="background:#007bff;"></div>Entregas Feitas</div>
-    <div class="item"><div class="cor" style="background:#ffc107;"></div>Coletas Efetivadas</div>
-  </div>
+  
 
-  <script>
-    const canvas = document.getElementById('graficoPizza');
-    const ctx = canvas.getContext('2d');
-
-    const dados = [
-      { valor: 90, cor: '#28a745' },   // Clientes Satisfeitos
-      { valor: 75, cor: '#007bff' },   // Entregas Feitas
-      { valor: 60, cor: '#ffc107' }    // Coletas Efetivadas
-    ];
-
-    const total = dados.reduce((acc, item) => acc + item.valor, 0);
-    let inicio = -0.5 * Math.PI;
-    let progresso = 0;
-
-    function animarPizza() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      let anguloAtual = inicio;
-
-      dados.forEach((item, i) => {
-        const proporcao = item.valor / total;
-        const anguloFinal = anguloAtual + proporcao * 2 * Math.PI * progresso;
-
-        ctx.beginPath();
-        ctx.moveTo(canvas.width / 2, canvas.height / 2);
-        ctx.arc(canvas.width / 2, canvas.height / 2, 100, anguloAtual, anguloFinal);
-        ctx.closePath();
-        ctx.fillStyle = item.cor;
-        ctx.fill();
-
-        anguloAtual = anguloFinal;
-      });
-
-      if (progresso < 1) {
-        progresso += 0.02;
-        requestAnimationFrame(animarPizza);
-      }
-    }
-
-    animarPizza();
-  </script>
 </body>
 </html>

@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="styles/Style.css" />
     <link rel="stylesheet" href="styles/NavBar.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
@@ -21,21 +22,22 @@
     <header>
         <div class="nav_bar">
             <div class="nav_logo">
-                <img src="assets/Logo.jpeg" alt="">
+                <img src="assets/Logo.jpeg" alt="Logo HS EXPREX TRANSPORTES">
             </div>
 
             <ul class="nav_links">
-                <li class="nav_link_item"><a href="#">HOME</a></li>
-                <li class="nav_link_item"><a href="#">SOBRE NÓS</a></li>
-                <li class="nav_link_item"><a href="#">NOSSOS VALORES</a></li>
+                <li class="nav_link_item"><a href="#">Inicio
+</a></li>
+                <li class="nav_link_item"><a href="#">Quem Somos</a></li>
+                <li class="nav_link_item"><a href="#">Nossos Serviços</a></li>
 
             </ul>
 
             <button class="button_nav_whats"><i class="fa-brands fa-whatsapp"></i><a href="#">
                     </i>WHATSAPP</a></button>
 
-            <div class="nav_mobile_icon">
-                <i class="fa fa-bars"></i>
+            <div class="nav_mobile_icon" >
+                <i class="fa fa-bars" style="font-size: 40px !important;"></i>
             </div>
 
             <div class="nav_links_mobile" style="display: none;">
@@ -71,7 +73,7 @@
                 </div>
             </div>
         </div>
-
+   
         <!---SECTION SERVIÇOS-->
         <section class="servicos" id="servicos">
             <div class="servicos_content">
@@ -160,29 +162,90 @@
 
             </div>
         </section>
+             <!--------->
+        <section class="hs-section">
+    <div class="hs-container">
+      <div class="hs-text">
+        <h2>HS EXPREX TRANSPORTES</h2>
+        <p>
+          A HS EXPREX TRANSPORTES é referência em soluções logísticas inteligentes e seguras. 
+          Com frota moderna, equipe especializada e tecnologia de rastreamento, oferecemos 
+          transporte rodoviário com agilidade, pontualidade e total confiança.
+        </p>
+        <ul>
+          <li><i class="fas fa-truck-moving"></i> Transporte rodoviário de cargas</li>
+          <li><i class="fas fa-clock"></i> Compromisso com prazos</li>
+          <li><i class="fas fa-shield-alt"></i> Segurança e rastreamento em tempo real</li>
+          <li><i class="fas fa-handshake"></i> Atendimento personalizado</li>
+        </ul>
+      </div>
+      <div class="hs-image">
+        <img src="assets/caminhao01.com.png" alt="Caminhão em estrada">
+      </div>
+    </div>
+  </section>
         <!--SECTION SOBRE NÓS-->
         <section class="sobre_nos">
             <div class="sobre_nos_content">
                 <div class="div_group_images_sobre_nos">
-               <img src="assets/caminhoes-e-carretas.png" alt="Caminhões e Carretas HS EXPREX">
-               </div>
+                    <img src="assets/caminhoes-e-carretas.png" alt="Caminhões e Carretas HS EXPREX">
+                </div>
 
-               <div class="div_group_text_sobre_nos">
+                <div class="div_group_text_sobre_nos">
 
-                <h2>Conectamos sua empresa aos destinos certos com <span>agilidade e segurança</span></h2>
+                    <h2>Conectamos sua empresa aos destinos certos com <span>agilidade e segurança</span></h2>
 
-            <p><span class="subtitle_sobre_nos">A <b>HS EXPREX TRANSPORTES</b> é sua parceira estratégica em transporte rodoviário. Atendemos empresas de todos os portes com soluções logísticas eficientes, atendimento ágil e compromisso com a pontualidade. Cuidamos da sua carga do ponto de origem ao destino final.</span></p>
-               </div>
+                    <p><span class="subtitle_sobre_nos">A <b>HS EXPREX TRANSPORTES</b> é sua parceira estratégica em
+                            transporte rodoviário. Atendemos empresas de todos os portes com soluções logísticas
+                            eficientes, atendimento ágil e compromisso com a pontualidade. Cuidamos da sua carga do
+                            ponto de origem ao destino final.</span></p>
+                </div>
             </div>
 
-            
-            
+
+
         </section>
         <!---------------------------------------->
+         <section>
+            <div class="grafico-container">
+                <h2><i class="fas fa-chart-bar"></i> Indicadores da Transportadora</h2>
+
+                <div class="barra">
+                    <div class="label"><i class="fas fa-smile"></i> Clientes Satisfeitos</div>
+                    <div class="progress">
+                        <div class="progress-bar clientes" data-value="90">90%</div>
+                    </div>
+                </div>
+
+                <div class="barra">
+                    <div class="label"><i class="fas fa-truck"></i> Entregas Feitas</div>
+                    <div class="progress">
+                        <div class="progress-bar entregas" data-value="80">80%</div>
+                    </div>
+                </div>
+
+                <div class="barra">
+                    <div class="label"><i class="fas fa-box"></i> Coletas Efetivadas</div>
+                    <div class="progress">
+                        <div class="progress-bar coletas" data-value="75">75%</div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // Animação das barras
+                document.querySelectorAll('.progress-bar').forEach(bar => {
+                    const value = bar.getAttribute('data-value');
+                    setTimeout(() => {
+                        bar.style.width = value + '%';
+                    }, 500);
+                });
+            </script>
+        </section>
         <!-- SECTION FORM -->
         <section class="orcamento">
 
-         
+
             <div class="section_img_form">
                 <form action="" method="post" class="form-orcamento">
                     <h2><i class="fas fa-file-signature"></i> Solicite seu Orçamento</h2>
@@ -232,65 +295,82 @@
         </section>
 
 
-        <section>
-              <div class="grafico-container">
-    <h2><i class="fas fa-chart-bar"></i> Indicadores da Transportadora</h2>
-
-    <div class="barra">
-      <div class="label"><i class="fas fa-smile"></i> Clientes Satisfeitos</div>
-      <div class="progress">
-        <div class="progress-bar clientes" data-value="90">90%</div>
-      </div>
-    </div>
-
-    <div class="barra">
-      <div class="label"><i class="fas fa-truck"></i> Entregas Feitas</div>
-      <div class="progress">
-        <div class="progress-bar entregas" data-value="80">80%</div>
-      </div>
-    </div>
-
-    <div class="barra">
-      <div class="label"><i class="fas fa-box"></i> Coletas Efetivadas</div>
-      <div class="progress">
-        <div class="progress-bar coletas" data-value="75">75%</div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Animação das barras
-    document.querySelectorAll('.progress-bar').forEach(bar => {
-      const value = bar.getAttribute('data-value');
-      setTimeout(() => {
-        bar.style.width = value + '%';
-      }, 500);
-    });
-  </script>
-        </section>
+       
     </div>
 
 
 
     <footer>
         <div class="footer_content">
-            <div class="logo_text">
-                <img src="assets/Logo.png" alt="">
+            <div class="content">
+                <div class="logo_text">
+                    <img src="assets/Logo.png" alt="">
 
-                <span>Na HS EXPREX TRANPORTES, oferecemos transporte rodoviário de cargas com agilidada, compromisso e cobertura nacional.</span>
-
+                    <span>Na HS EXPREX TRANPORTES, oferecemos transporte rodoviário de cargas com agilidada, compromisso
+                        e
+                        cobertura nacional.</span>
+                </div>
                 <div class="redes_sociais">
-                  <a href="https://www.instagram.com/seuusuario" target="_blank" class="instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://wa.me/seunumero" target="_blank" class="whatsapp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="https://www.facebook.com/seuusuario" target="_blank" class="facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
+                    <a href="https://www.instagram.com/seuusuario" target="_blank" class="instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/seunumero" target="_blank" class="whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/seuusuario" target="_blank" class="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
                 </div>
             </div>
+            <!--------------------------->
+            <div class="content">
+                <div class="group_footer">
+                    <h2>Institucional</h2>
+
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Quem Somos</a></li>
+                        <li><a href="#">Fale Conosco</a></li>
+                        <li><a href="#">Nossos Serviços</a></li>
+                        <li><a href="#">Politica de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--------------------------->
+            <div class="content">
+                <div class="group_footer">
+                    <h2>Nossos Serviços</h2>
+
+                    <ul class="list_nossos_servicos">
+                        <li><a href="#">Transporte Rodoviário de Cargas</a></li>
+                        <li><a href="#">Distribuição e Coleta</a></li>
+                        <li><a href="#">Fretes Personalizados</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--------------------------->
+            <div class="content">
+                <div class="group_footer">
+                    <h2>Contato</h2>
+                    <ul>
+                        <li>
+                             <i class="fas fa-envelope"></i>
+                            <a href="#">Fernandobiondo49@gmail.com</a></li>
+                         <li>
+                             <i class="fab fa-whatsapp"></i>
+                            <a href="#">(11) 9999-9999</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--------------------------->
+
+        </div>
+
+        
+        <div class="copyrigth">
+            <p><b>@HS EXPREX </b> - Todos direitos reservados</p>
         </div>
     </footer>
 
