@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scroll Infinito</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #c40000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #content {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .item {
+      background-color: white;
+      margin-bottom: 15px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 1.1rem;
+    }
+
+    .loader {
+      text-align: center;
+      padding: 20px;
+      font-size: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Scroll Infinito</h1>
+    <p>Exemplo com JavaScript puro</p>
+  </header>
+
+  <div id="content"></div>
+  <div class="loader" id="loader">Carregando mais conteúdo...</div>
+
+  <script>
+    const content = document.getElementById("content");
+    const loader = document.getElementById("loader");
+    let contador = 1;
+    let carregando = false;
+
+    function carregarMais() {
+      carregando = true;
+      loader.style.display = "block";
+
+      setTimeout(() => {
+        for (let i = 0; i < 100; i++) {
+          const item = document.createElement("div");
+          item.className = "item";
+          item.textContent = `Item ${contador++}`;
+          content.appendChild(item);
+        }
+        carregando = false;
+        loader.style.display = "none";
+      }, 800); // Simula tempo de carregamento
+    }
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const alturaPagina = document.documentElement.scrollHeight;
+      const alturaTela = window.innerHeight;
+
+      if (scrollTop + alturaTela >= alturaPagina - 10 && !carregando) {
+        carregarMais();
+      }
+    });
+
+    // Conteúdo inicial
+    carregarMais();
+  </script>
+
+</body>
+</html>
