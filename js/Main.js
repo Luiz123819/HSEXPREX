@@ -56,18 +56,19 @@ document.getElementById("form_whats").addEventListener('submit', function (e) {
 
 ////////////////////////////////////////SCROLL
 
-// Configuração padrão
+// Inicializa ScrollReveal com configuração padrão
 const sr = ScrollReveal({
   origin: 'bottom',
-  distance: '20%',
-  duration: 2000,
-  opacity: 0,
-  scale: 0.95,
-  easing: 'ease-in-out',
-  reset: false // se quiser que o efeito aconteça só uma vez
+  distance: '30px',       // distância mais natural para o movimento
+  duration: 1200,          // tempo ideal para fluidez
+  opacity: 0,              // começa invisível
+  scale: 0.95,             // leve redução para efeito de "zoom in"
+  easing: 'ease-out',      // suavidade na entrada
+  reset: true,             // reaplica o efeito ao rolar novamente
+  viewFactor: 0.2          // ativa quando 20% do elemento estiver visível
 });
 
-// Lista de seletores com mesmo efeito
+// Lista de seletores que receberão o efeito
 const elementos = [
   '.hs-section',
   '.caminhoes',
@@ -76,5 +77,9 @@ const elementos = [
   '.section_img_form'
 ];
 
-// Aplica o efeito a todos
-elementos.forEach(selector => sr.reveal(selector));
+// Aplica o efeito a cada seletor
+elementos.forEach(selector => {
+  sr.reveal(selector, {
+    interval: 100 // se houver múltiplos elementos iguais, revela em cascata
+  });
+});
