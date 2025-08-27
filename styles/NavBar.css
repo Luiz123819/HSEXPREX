@@ -1,252 +1,217 @@
 :root {
-  /* Vermelho vibrante para destaques e interações */
   --color-primary: #e63946;
-
-  /* Preto profundo para fundos e áreas principais */
   --color-dark: #1c1c1c;
-
-  /* Cinza médio para textos secundários e bordas */
   --color-gray: #6c757d;
-
-  /* Cinza claro para textos complementares e ícones */
   --color-light-gray: #b0b0b0;
-
-  /* Branco suave para contraste e áreas claras */
   --color-light: #f8f9fa;
-
-  /* Verde WhatsApp */
   --color-whatsapp: #25D366;
   --color-whatsapp-hover: #1ebe5d;
 
-  /* Sombra leve */
   --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* ===== HEADER ===== */
 header {
   position: fixed;
   top: 0;
-  padding: 10px 30px;
-  height: 90px;
   width: 100%;
-  background: linear-gradient(to right, rgb(255, 255, 255), rgb(249, 249, 249));
-  overflow: hidden;
-  z-index: 9999;
+  height: 90px;
+  padding: 10px 30px;
+  background: linear-gradient(to right, #fff, #f9f9f9);
   box-shadow: var(--shadow-light);
+  z-index: 9999;
+  overflow: hidden;
 }
 
+/* ===== NAVIGATION BAR ===== */
 .nav_bar {
   display: flex;
-  align-content: center;
   justify-content: space-between;
+  align-items: center;
   height: 100%;
   width: 100%;
 }
 
-.nav_bar .nav_logo img {
+.nav_logo img {
   width: 100px;
-  height: 100%;
+  height: auto;
 }
 
+/* ===== NAV LINKS ===== */
 .nav_links {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 40px;
   list-style: none;
+  align-items: center;
 }
 
 .nav_link_item a {
-  text-decoration: none;
-  color: var(--color-dark);
+  position: relative;
   font-size: 18px;
   font-weight: 500;
-  position: relative;
-  transition: ease-in-out .5s;
+  color: var(--color-dark);
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
 }
 
 .nav_link_item a::after {
-  content: " ";
-  width: 0%;
-  height: 4px;
+  content: "";
   position: absolute;
   left: 0;
   bottom: -4px;
-  transition: ease-in-out 0.5s;
+  width: 0%;
+  height: 4px;
   background-color: var(--color-primary);
   border-radius: 3px;
+  transition: 0.5s ease-in-out;
 }
 
 .nav_link_item a:hover::after {
   width: 100%;
 }
 
-.nav_bar .button_nav_whats {
-  width: 240px;
-  height: 50px;
-  text-align: center;
-  border-radius: 30px;
-  background-color: var(--color-whatsapp);
-  box-shadow: var(--shadow-medium);
+/* ===== WHATSAPP BUTTON ===== */
+.button_nav_whats {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  width: 240px;
+  height: 50px;
   margin-top: 9px;
-  cursor: pointer;
   border: none;
-  transition: ease-in-out .3s;
+  border-radius: 30px;
+  background-color: var(--color-whatsapp);
+  box-shadow: var(--shadow-medium);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
-.nav_bar .button_nav_whats:hover {
+.button_nav_whats:hover {
   transform: scale(1.1);
   background-color: var(--color-whatsapp-hover);
 }
 
-.nav_bar .button_nav_whats i {
+.button_nav_whats i {
   font-size: 30px;
   font-weight: 600;
   color: var(--color-light);
 }
 
-.nav_bar .button_nav_whats a {
-  text-decoration: none;
+.button_nav_whats a {
   font-size: 17px;
   font-weight: 900;
   color: var(--color-light);
+  text-decoration: none;
 }
 
+/* ===== MOBILE ICON ===== */
 .nav_mobile_icon {
   display: none;
 }
 
+/* ===== MENU LATERAL ===== */
 #menu_lateral {
-   transition: 1s ease-in-out;
-  background: linear-gradient(to right, rgb(255, 255, 255), rgb(249, 249, 249));
-  height: 100%;
-  z-index: 9999 !important;
-
   position: fixed;
   top: 90px;
   right: 0;
-
-  overflow: hidden;
   width: 0%;
+  height: 100%;
+  background: linear-gradient(to right, #fff, #f9f9f9);
+  overflow: hidden;
+  transition: 1s ease-in-out;
+  z-index: 9999 !important;
 }
 
-@media screen and (max-width: 768px) {
-  .nav_links {
-    display: none;
-  }
+/* ===== OVERLAY MENU ===== */
+.overlay_menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-dark);
+  opacity: 0.5;
+  z-index: 8888;
+  display: none;
+  transition: 0.8s ease-in-out;
+}
 
-  .nav_bar .button_nav_whats {
+.overlay_open {
+  display: block;
+}
+
+/* ===== RESPONSIVO ===== */
+@media screen and (max-width: 768px) {
+  .nav_links,
+  .button_nav_whats {
     display: none;
   }
 
   .nav_logo img {
-    width: 100px !important;
-    height: 100px !important;
+    width: 100px;
     margin-left: -20px;
     margin-top: -10px;
   }
 
   .nav_mobile_icon {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem !important;
+    font-size: 3rem;
     margin-right: -10px;
     cursor: pointer;
   }
-  
+
   .nav_open {
     width: 60% !important;
     overflow: visible;
-   
   }
 
-  nav {
-
-
-
-
-
-
-    .nav_content {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-
-    }
-
-    .nav_content span {
-      padding: 0px 20px;
-      width: 100%;
-      height: 60px;
-      display: flex;
-      justify-content: start;
-      align-items: center !important;
-      gap: 10px;
-
-      border-bottom: 1px solid rgb(137, 137, 137);
-      cursor: pointer;
-      transition: .5s ease-in-out;
-      text-align: start !important;
-    }
-
-    .nav_content span:hover {
-      background-color: #f82a2a;
-      color: rgb(0, 136, 255);
-
-    }
-
-    .nav_content a {
-      text-decoration: none;
-    }
-
-    .nav_content i {
-      font-size: 20px;
-    }
-
-    .nav_content h5 {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      gap: 15px;
-      margin-top: 15px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 500;
-      color: #000000;
-
-
-
-    }
-
-    .politicas_menu_lateral {
-      position: fixed;
-      bottom: 0;
-      border-top: 1px solid black;
-
-    }
-
-  }
-  
-  .overlay_menu {
-   
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 8888;
+  nav .nav_content {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    display: none;
-    height: 100%;
-    opacity: 0.5;
-    background-color: #1c1c1c;
-    transition: 0.8s ease-in-out;
+  }
+
+  .nav_content span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-gray);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+
+  .nav_content span:hover {
+    background-color: var(--color-primary);
+    color: #0088ff;
+  }
+
+  .nav_content a {
+    text-decoration: none;
+  }
+
+  .nav_content i {
+    font-size: 20px;
+  }
+
+  .nav_content h5 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .politicas_menu_lateral {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #000;
   }
 }
-.overlay_open{
-    display: block;
-  }

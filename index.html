@@ -73,24 +73,24 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <div class="container">
+  <div class="container p-0">
     <!-- BANNER -->
-    <div class="banner">
+    <section class="banner">
       <div class="banner_content">
         <h1>Transporte Seguro e Confiável</h1>
         <span>Conectamos destinos com eficiência, pontualidade e total segurança.
           Sua carga em boas mãos, sempre!</span>
         <div class="banner_buttons">
           <a href="#form_whats" style="text-decoration: none;"><button class="btn_baner_button_orcamento">
-            Solicitar Orçamento
-          </button></a>
+              Solicitar Orçamento
+            </button></a>
           <a href="#servicos" style="text-decoration: none">
             <button class="btn_baner_button_servicos">Nossos Serviços</button>
           </a>
         </div>
       </div>
-    </div>
- <!-- HS EXPREX -->
+    </section>
+    <!-- HS EXPREX -->
     <section class="hs-section" id="hs-section">
       <div class="hs-container">
         <div class="hs-text">
@@ -102,21 +102,25 @@
             agilidade, pontualidade e total confiança.
           </p>
           <ul>
+
             <li>
-              <i class="fas fa-truck-moving"
-              style="color:rgb(0, 255, 30);margin-right: 7px;"></i> Transporte rodoviário de
+              <div class="efect_content">
+                <span class="efect_icon"></span>
+                <i class="fas fa-truck-moving" id="icon_01"></i>
+              </div>
+              Transporte rodoviário de
               cargas
             </li>
-            
+
+
             <li>
-              <i class="fas fa-shield-alt" style="color:blue; margin-right: 7px;"></i> Segurança e rastreamento em
+              <i class="fas fa-shield-alt" style="background-color: rgb(134, 230, 108);"></i> Segurança e rastreamento
+              em
               tempo real
             </li>
-            <li><i class="fas fa-clock"
-              style="color:rgb(179, 0, 255);"></i> Compromisso com prazos</li>
+            <li><i class="fas fa-clock" style="background-color: rgb(108, 161, 230);"></i> Compromisso com prazos</li>
             <li>
-              <i class="fas fa-handshake"
-              style="color:rgb(225, 255, 0);"></i> Atendimento personalizado
+              <i class="fas fa-handshake" style="background-color: rgb(108, 230, 191);"></i> Atendimento personalizado
             </li>
           </ul>
         </div>
@@ -135,54 +139,153 @@
         <div class="servicos_cards">
           <!-- CARD 1 -->
           <div class="servicos_card">
-            <i class="fa-solid fa-truck" id="icon_card_primary" style="
-                  background-color: rgb(151, 151, 226);
-                  color: rgb(78, 78, 230);
-                "></i>
+            <div class="icons_card">
+              <span>Popular</span>
+              <i class="fa-solid fa-truck" id="icon_card_primary"
+                style="background-color: rgb(151, 151, 226); color: rgb(78, 78, 230);"></i>
+            </div>
             <h3>Transporte Rodoviário</h3>
-            <span id="subtitle_card">Frota moderna e rastreamento em tempo real para cargas de todos
-              os tamanhos</span>
-            <p><i class="fa-solid fa-check"></i> Seguro total</p>
+            <span id="subtitle_card">Frota moderna com rastreamento em tempo real para cargas de todos os portes.</span>
+            <p><i class="fa-solid fa-check"></i> Seguro Total</p>
             <p><i class="fa-solid fa-check"></i> Entrega Rápida</p>
-            <p><i class="fa-solid fa-check"></i> Entrega Expressa</p>
+            <p><i class="fa-solid fa-check"></i> Serviço Expresso</p>
           </div>
 
           <!-- CARD 2 -->
           <div class="servicos_card">
-            <i class="fa-solid fa-box-archive" id="icon_card_primary"
-              style="background-color: rgb(112, 209, 112); color: green"></i>
+            <div class="icons_card">
+              <span>Popular</span>
+              <i class="fa-solid fa-box-archive" id="icon_card_primary"
+                style="background-color: rgb(112, 209, 112); color: green;"></i>
+            </div>
             <h3>Distribuição e Coleta</h3>
-            <span id="subtitle_card">Implementamos soluções ágeis e integrada, com controle em tempo
-              real.
-            </span>
-            <p>
-              <i class="fa-solid fa-check"></i>Agilidade na Coleta e
-              Distribuição
-            </p>
-            <p>
-              <i class="fa-solid fa-check"></i>Estrutura Logistica Integrada
-            </p>
+            <span id="subtitle_card">Soluções ágeis e integradas com controle logístico em tempo real.</span>
+            <p><i class="fa-solid fa-check"></i> Coleta e Entrega Ágeis</p>
+            <p><i class="fa-solid fa-check"></i> Estrutura Logística Integrada</p>
             <p><i class="fa-solid fa-check"></i> Monitoramento Contínuo</p>
           </div>
 
           <!-- CARD 3 -->
           <div class="servicos_card">
-            <i class="fa-solid fa-comment-dots" id="icon_card_primary" style="
-                  background-color: rgb(179, 111, 213);
-                  color: rgb(107, 17, 190);
-                "></i>
+            <div class="icons_card">
+              <span>Popular</span>
+              <i class="fa-solid fa-comment-dots" id="icon_card_primary"
+                style="background-color: rgb(179, 111, 213); color: rgb(107, 17, 190);"></i>
+            </div>
             <h3>Fretes Personalizados</h3>
-            <span id="subtitle_card">Soluções de frete personalizados, com rotas e veiculos
-              ajustável.</span>
-            <p><i class="fa-solid fa-check"></i>Frete sob Medida</p>
-            <p><i class="fa-solid fa-check"></i> Operação Ajusável</p>
-            <p><i class="fa-solid fa-check"></i>Resultados Otimizados</p>
+            <span id="subtitle_card">Soluções sob medida com rotas e veículos ajustáveis para máxima
+              flexibilidade.</span>
+            <p><i class="fa-solid fa-check"></i> Frete Personalizado</p>
+            <p><i class="fa-solid fa-check"></i> Operação Flexível</p>
+            <p><i class="fa-solid fa-check"></i> Resultados Otimizados</p>
+          </div>
+
+        </div>
+    </section>
+
+    <section class="nossa_historia_container">
+
+      <div class="text_nossa_historia">
+        <span class="topo"><i class="fa fa-circle"></i>
+          Nossa História</span>
+
+        <h1>O Futuro <span style="color: red;"> Começou</span></h1>
+
+        <p>
+          A HS EXPREX TRANSPORTES nasceu em 2024 com uma missão clara:
+          revolucionar o transporte brasileiro com compromisso, agilidade e
+          transparência. <span style="color: red;">Somos novos, mais já chegamos prontos.</span>
+        </p>
+
+
+        <div class="nossa_historia_valores_cards_container">
+          <!-- Missão -->
+          <div class="nossa_historia_valores_cards_text">
+            <i class="fas fa-bullseye"></i> <!-- Representa foco e propósito -->
+            <div>
+              <h3>Nossa Missão</h3>
+              <p>Transformar o transporte brasileiro, oferecendo soluções ágeis e confiáveis desde o primeiro dia.</p>
+            </div>
+          </div>
+
+          <!-- Visão -->
+          <div class="nossa_historia_valores_cards_text">
+            <i class="fas fa-chart-line"></i> <!-- Representa crescimento e visão estratégica -->
+            <div>
+              <h3>Nossa Visão</h3>
+              <p>Ser reconhecida como a transportadora mais inovadora do Brasil, referência nacional em atendimento ao
+                cliente.</p>
+            </div>
+          </div>
+
+          <!-- Valores -->
+          <div class="nossa_historia_valores_cards_text">
+            <i  class="fas fa-handshake"></i> <!-- Representa ética, parceria e compromisso -->
+            <div>
+              <h3>Nossos Valores</h3>
+              <p>Inovação constante, transparência total, agilidade nas entregas e compromisso com a excelência em cada
+                transporte.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="quadros_nossa_historia">
+          <div class="quadro">
+            <h2 style="color: red;">2024</h2>
+            <span>Fundação</span>
+          </div>
+          <div class="quadro">
+            <h2 style="color: red;">100%</h2>
+            <span>Tecnologia</span>
+          </div>
+          <div class="quadro">
+            <h2 style="color: rgb(255, 255, 255);">24H</h2>
+            <span>Operação</span>
+          </div>
+          <div class="quadro">
+            <h2 style="color: rgb(255, 255, 255);">27</h2>
+            <span>Estados</span>
           </div>
         </div>
       </div>
+
+      <div class="card_nossa_historia_container">
+       
+        <div class="card_front_nossa_historia">
+          <span id="topo_card">Empresa Nova <i class="fa fa-circle"></i> Com compromisso</span>
+
+          <h2>Por que escolher a HS EXPREX?</h2>
+
+          <div class="card_front_nossa_historia_group">
+            <!-- Card 1: Sem Vícios do Passado -->
+            <div class="card_front_nossa_historia_group_content">
+              <i style="background-color: red;"  class="fas fa-recycle"></i> <!-- Representa renovação e processos modernos -->
+              <div class="card_front_nossa_historia_group_content_2">
+                <h2>Sem Vícios do Passado</h2>
+                <span>Processos modernos desde o início</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Fome de Crescer -->
+            <div class="card_front_nossa_historia_group_content">
+              <i class="fas fa-chart-line"></i> <!-- Representa crescimento e ambição -->
+              <div class="card_front_nossa_historia_group_content_2">
+                <h2>Fome de Crescer</h2>
+                <span>Energia de startup, seriedade de empresa</span>
+              </div>
+            </div>
+          </div>
+          <div class="rodape_card_nossa_historia">
+            <h2 style="color: rgb(205, 35, 35);">STATUS OPERACIONAL</h2>
+            <span style="color: white;">PRONTO PARA ATENDER</span>
+            <span style="color: rgb(73, 218, 73);">SISTEMAS 100% FUCIONAIS</span>
+          </div>
+        </div>
+         <div class="card_back"></div>
+      </div>
     </section>
 
-   
 
     <!-- SOBRE NÓS -->
     <section class="sobre_nos" id="sobre_nos">
@@ -208,26 +311,26 @@
       </div>
     </section>
 
-  <section class="numeros_empresa" id="numeros">
-  <h2>Nossos Resultados</h2>
-  <div class="numeros_container">
-    <div class="grafico-item">
-      <h3>🚚 Entregas Realizadas</h3>
-      <div class="barra" data-valor="90%"></div>
-      <span>+120.000 entregas</span>
-    </div>
-    <div class="grafico-item">
-      <h3>👥 Clientes Ativos</h3>
-      <div class="barra" data-valor="75%"></div>
-      <span>+3.500 empresas</span>
-    </div>
-    <div class="grafico-item">
-      <h3>🛣️ Km Percorridos/mês</h3>
-      <div class="barra" data-valor="85%"></div>
-      <span>+1.200.000 km</span>
-    </div>
-  </div>
-</section>
+    <section class="numeros_empresa" id="numeros">
+      <h2>Nossos Resultados</h2>
+      <div class="numeros_container">
+        <div class="grafico-item">
+          <h3>🚚 Entregas Realizadas</h3>
+          <div class="barra" data-valor="90%"></div>
+          <span>+120.000 entregas</span>
+        </div>
+        <div class="grafico-item">
+          <h3>👥 Clientes Ativos</h3>
+          <div class="barra" data-valor="75%"></div>
+          <span>+3.500 empresas</span>
+        </div>
+        <div class="grafico-item">
+          <h3>🛣️ Km Percorridos/mês</h3>
+          <div class="barra" data-valor="85%"></div>
+          <span>+1.200.000 km</span>
+        </div>
+      </div>
+    </section>
 
 
     <!-- FORMULÁRIO -->
@@ -333,9 +436,15 @@
         <div class="group_footer">
           <h2>Nossos Serviços</h2>
           <ul class="list_nossos_servicos">
-            <li><a href="https://wa.me/5511986125768?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20Transporte%20 Rodoviário%20de%20Cargas.">Transporte Rodoviário de Cargas</a></li>
-            <li><a href="https://wa.me/5511986125768?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20Distribuição%20e%20 Coleta%20de%20cargas.">Distribuição e Coleta</a></li>
-            <li><a href="https://wa.me/5511986125768?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20Fretes.">Fretes Personalizados</a></li>
+            <li><a
+                href="https://wa.me/5511986125768?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20Transporte%20 Rodoviário%20de%20Cargas.">Transporte
+                Rodoviário de Cargas</a></li>
+            <li><a
+                href="https://wa.me/5511986125768?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20Distribuição%20e%20 Coleta%20de%20cargas.">Distribuição
+                e Coleta</a></li>
+            <li><a
+                href="https://wa.me/5511986125768?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20Fretes.">Fretes
+                Personalizados</a></li>
           </ul>
         </div>
       </div>
