@@ -1,92 +1,459 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scroll Infinito</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HS EXPREX Transportes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, sans-serif;
+    :root {
+      --cor-principal: #c40000;
+      --cor-clara: #f9f9f9;
+      --cor-escura: #333;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #f7f7f7;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cor-clara);
+      color: var(--cor-escura);
+      line-height: 1.6;
     }
 
     header {
-      background-color: #c40000;
+      background: var(--cor-principal);
       color: white;
-      padding: 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
-    #content {
-      max-width: 600px;
-      margin: 30px auto;
-      padding: 0 20px;
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
-    .item {
-      background-color: white;
-      margin-bottom: 15px;
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--cor-principal);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .servicos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .servico {
+      background: white;
       padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex: 0 0 300px;
+      text-align: center;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding-bottom: 20px;
+    }
+
+    .card {
+      flex: 0 0 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      scroll-snap-align: center;
+    }
+
+    .card .cliente {
+      font-weight: bold;
+      color: var(--cor-principal);
+    }
+
+    .mapa {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .estado {
+      background: #e0e0e0;
+      padding: 10px 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    .loader {
+    .estado:hover {
+      background: var(--cor-principal);
+      color: white;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: var(--cor-principal);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: var(--cor-principal);
+      color: white;
       text-align: center;
       padding: 20px;
-      font-size: 1rem;
-      color: #666;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .card, .servico {
+        flex: 0 0 90%;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Scroll Infinito</h1>
-    <p>Exemplo com JavaScript puro</p>
+    <h1>HS EXPREX Transportes</h1>
+    <p>Agilidade, segurança e confiança em cada entrega.</p>
   </header>
 
-  <div id="content"></div>
-  <div class="loader" id="loader">Carregando mais conteúdo...</div>
+  <section class="sobre">
+    <h2>Quem Somos</h2>
+    <p>Somos uma transportadora especializada em entregas rápidas e seguras em todo o Brasil. Nossa missão é conectar empresas e pessoas com eficiência e responsabilidade.</p>
+  </section>
 
-  <script>
-    const content = document.getElementById("content");
-    const loader = document.getElementById("loader");
-    let contador = 1;
-    let carregando = false;
+  <section class="servicos">
+    <h2>Serviços</h2>
+    <div class="servicos-grid">
+      <div class="servico">Transporte Rodoviário</div>
+      <div class="servico">Cargas Fracionadas</div>
+      <div class="servico">Logística Reversa</div>
+      <div class="servico">Coletas Expressas</div>
+    </div>
+  </section>
 
-    function carregarMais() {
-      carregando = true;
-      loader.style.display = "block";
+  <section class="depoimentos">
+    <h2>Depoimentos de Clientes</h2>
+    <div class="carousel">
+      <div class="card hs-depoimento">
+        <p>"A HS EXPREX sempre entrega no prazo. Atendimento excelente!"</p>
+        <div class="cliente">Carlos Silva — Logística Silva</div>
+      </div>
+      <div class="card hs-depoimento">
+        <p>"Confio 100% na equipe. Transporte seguro e rastreável."</p>
+        <div class="cliente">Fernanda Lima — AgroLima</div>
+      </div>
+      <div class="card hs-depoimento">
+        <p>"Serviço impecável. Recomendo para qualquer empresa!"</p>
+        <div class="cliente">João Mendes — JM Distribuidora</div>
+      </div>
+    </div>
+  </section>
 
-      setTimeout(() => {
-        for (let i = 0; i < 100; i++) {
-          const item = document.createElement("div");
-          item.className = "item";
-          item.textContent = `Item ${contador++}`;
-          content.appendChild(item);
-        }
-        carregando = false;
-        loader.style.display = "none";
-      }, 800); // Simula tempo de carregamento
+  <section class="cobertura">
+    <h2>Estados Atendidos</h2>
+    <div class="mapa">: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex: 0 0 300px;
+      text-align: center;
     }
 
-    window.addEventListener("scroll", () => {
-      const scrollTop = window.scrollY;
-      const alturaPagina = document.documentElement.scrollHeight;
-      const alturaTela = window.innerHeight;
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding-bottom: 20px;
+    }
 
-      if (scrollTop + alturaTela >= alturaPagina - 10 && !carregando) {
-        carregarMais();
+    .card {
+      flex: 0 0 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      scroll-snap-align: center;
+    }
+
+    .card .cliente {
+      font-weight: bold;
+      color: var(--cor-principal);
+    }
+
+    .mapa {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .estado {
+      background: #e0e0e0;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .estado:hover {
+      background: var(--cor-principal);
+      color: white;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: var(--cor-principal);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: var(--cor-principal);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
       }
+
+      .card, .servico {
+        flex: 0 0 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HS EXPREX Transportes</h1>
+    <p>Agilidade, segurança e confiança em cada entrega.</p>
+  </header>
+
+  <section class="sobre">
+    <h2>Quem Somos</h2>
+    <p>Somos uma transportadora especializada em entregas rápidas e seguras em todo o Brasil. Nossa missão é conectar empresas e pessoas com eficiência e responsabilidade.</p>
+  </section>
+
+  <section class="servicos">
+    <h2>Serviços</h2>
+    <div class="servicos-grid">
+      <div class="servico">Transporte Rodoviário</div>
+      <div class="servico">Cargas Fracionadas</div>
+      <div class="servico">Logística Reversa</div>
+      <div class="servico">Coletas Expressas</div>
+    </div>
+  </section>
+
+  <section class="depoimentos">
+    <h2>Depoimentos de Clientes</h2>
+    <div class="carousel">
+      <div class="card hs-depoimento">
+        <p>"A HS EXPREX sempre entrega no prazo. Atendimento excelente!"</p>
+        <div class="cliente">Carlos Silva — Logística Silva</div>
+      </div>
+      <div class="card hs-depoimento">
+        <p>"Confio 100% na equipe. Transporte seguro e rastreável."</p>
+        <div class="cliente">Fernanda Lima — AgroLima</div>
+      </div>
+      <div class="card hs-depoimento">
+        <p>"Serviço impecável. Recomendo para qualquer empresa!"</p>
+        <div class="cliente">João Mendes — JM Distribuidora</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cobertura">
+    <h2>Estados Atendidos</h2>
+    <div class="mapa">
+      <div class="estado" data-info="SP: Cobertura total">SP</div>
+      <div class="estado" data-info="RJ: Entregas expressas">RJ</div>
+      <div class="estado" data-info="MG: Atuação em BH e Uberlândia">MG</div>
+      <div class="estado" data-info="PR: Curitiba e região">PR</div>
+    </div>
+    <p id="info-estado" style="margin-top:20px;"></p>
+  </section>
+
+  <section class="formulario">
+    <h2>Solicite um Orçamento</h2>
+    <form>
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <input type="text" placeholder="Origem e destino" required>
+      <textarea placeholder="Detalhes da carga" rows="4"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+      <div class="estado" data-info="SP: Cobertura total">SP</div>
+      <div class="estado" data-info="RJ: Entregas expressas">RJ</div>
+      <div class="estado" data-info="MG: Atuação em BH e Uberlândia">MG</div>
+      <div class="estado" data-info="PR: Curitiba e região">PR</div>
+    </div>
+    <p id="info-estado" style="margin-top:20px;"></p>
+  </section>
+
+  <section class="formulario">
+    <h2>Solicite um Orçamento</h2>
+    <form>
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <input type="text" placeholder="Origem e destino" required>
+      <textarea placeholder="Detalhes da carga" rows="4"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section class="privacidade">
+    <h2>Política de Privacidade</h2>
+    <p>Respeitamos sua privacidade. Seus dados são usados apenas para contato e orçamento. Nenhuma informação é compartilhada com terceiros.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HS EXPREX Transportes. Todos os direitos reservados.</p>
+  </footer>
+
+  <a href="https://wa.me/5511999999999" class="whatsapp-button" target="_blank">
+
+  <section class="privacidade">
+    <h2>Política de Privacidade</h2>
+    <p>Respeitamos sua privacidade. Seus dados são usados apenas para contato e orçamento. Nenhuma informação é compartilhada com terceiros.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HS EXPREX Transportes. Todos os direitos reservados.</p>
+  </footer>
+
+  <a href="https://wa.me/5511999999999" class="whatsapp-button" target="_blank">📱</a>
+
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('section', {
+      origin: 'bottom',
+      distance: '40px',
+      duration: 1000,
+      opacity: 0,
+      scale: 0.95,
+      easing: 'ease-out',
+      interval: 100,
+      reset: true
     });
 
-    // Conteúdo inicial
-    carregarMais();
-  </script>
+    // Mapa interativo
+    const estados = document.querySelectorAll('.estado');
+    const info =📱</a>
 
-</body>
-</html>
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('section', {
+      origin: 'bottom',
+      distance: '40px',
+      duration: 1000,
+      opacity: 0,
+      scale: 0.95,
+      easing: 'ease-out',
+      interval: 100,
+      reset: true
+    });
+
+    // Mapa interativo
+    const estados = document.querySelectorAll('.estado');
+    const info =

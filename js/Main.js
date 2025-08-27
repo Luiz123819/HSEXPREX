@@ -70,11 +70,8 @@ const sr = ScrollReveal({
 
 // Lista de seletores que receberão o efeito
 const elementos = [
-  '.hs-section',
-  '.caminhoes',
-  '.div_group_text_sobre_nos',
-  '.grafico-container',
-  '.section_img_form'
+  '.hs_image_img',
+
 ];
 
 // Aplica o efeito a cada seletor
@@ -83,3 +80,31 @@ elementos.forEach(selector => {
     interval: 100 // se houver múltiplos elementos iguais, revela em cascata
   });
 });
+
+
+  ScrollReveal().reveal('.grafico-item', {
+    origin: 'bottom',
+    distance: '40px',
+    duration: 1000,
+    opacity: 0,
+    scale: 0.95,
+    easing: 'ease-out',
+    interval: 200,
+    reset: false
+  });
+
+  // Animação das barras ao entrar na tela
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const barra = entry.target.querySelector('.barra');
+        const valor = barra.getAttribute('data-valor');
+        barra.style.width = valor;
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.grafico-item').forEach(item => {
+    observer.observe(item);
+  });
+
