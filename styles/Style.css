@@ -473,17 +473,14 @@ form h2::after {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+ 
   max-width: 1200px;
   margin: 0 auto;
   gap: 40px;
 }
 
 /* Imagem dos caminhões */
-.div_group_images_sobre_nos {
-  flex: 1 1 400px;
-  text-align: center;
-}
+
 
 .div_group_images_sobre_nos img.caminhoes {
   max-width: 100%;
@@ -1003,4 +1000,57 @@ transform: rotate(10deg); /* Inclina 10 graus no sentido horário */
 .rodape_card_nossa_historia span{
   font-size: 1rem;
   font-weight: 600;
+}
+.card_sobre_nos{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  background-color: #6665652d;
+  max-width: 500px;
+  padding: 30px 20px;
+  border-radius:20px;
+
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card_sobre_nos_content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card_int_sobreNos{
+ display: flex;
+ align-items: center;
+ justify-content: start;
+ gap: 20px;
+}
+.card_int_sobreNos i{
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #c13b3b93;
+  padding: 1.2rem;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_int_sobreNos h5{
+  font-weight: 1rem;
+  font-weight: 600;
+  margin-bottom: -2px;
+  color: rgb(205, 57, 57);
+}
+.card_int_sobreNos span{
+  font-size: inherit;
+  font-weight: 600;
+  color: #505050;
+}
+.card_sobre_nos_content h2{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+
 }
