@@ -81,7 +81,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .banner_content h1 {
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-size: 2.5rem;
   font-weight: 800;
   color: #fff;
   line-height: 1.2;
@@ -188,7 +188,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .servicos h1 {
-  font-size:clamp(2rem, 4vw, 2.8em);
+  font-size:2.5rem;
   font-weight: 700;
   text-align: center;
   color: #333;
@@ -197,6 +197,36 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .servicos h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background-color: red;
+  border-radius: 2px;
+}
+.numeros_empresa h2 {
+  font-size:2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  position: relative;
+  padding-bottom: 10px;
+}
+@media screen  and (max-width: 768px){
+  .numeros_empresa h2,
+  .numeros_empresa h2 span,
+  .servicos_content h1,
+  .servicos_content h1 span,
+  .text_nossa_historia h1,
+  .text_nossa_historia h1 span
+  {
+    font-size: 2rem !important;
+  }
+}
+.numeros_empresa h2::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -281,8 +311,8 @@ font-family: Arial, Helvetica, sans-serif;
 .servicos_card:focus {
   transform: scale(1.03);
   box-shadow:
-    0 4px 8px rgba(0, 0, 0, 0.08),
-    0 12px 24px rgba(0, 0, 0, 0.12);
+    0 4px 8px rgba(255, 0, 0, 0.196),
+    0 12px 24px rgba(255, 0, 0, 0.053);
 }
 
 .servicos_card:focus {
@@ -526,6 +556,7 @@ form h2::after {
 /* Responsividade */
 @media (max-width: 768px) {
 .sobre_nos {
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -534,7 +565,7 @@ form h2::after {
   .sobre_nos_content {
  
    max-width: 400px;
-   
+   align-items: center;
     flex-direction: column;
     text-align:justify;
   }
@@ -552,12 +583,19 @@ form h2::after {
   padding: 60px 20px;
 
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 .numeros_empresa h2 {
-  font-size: 2.5rem;
-  color: #ff0000;
-  margin-bottom: 40px;
+   font-size: clamp(2.2rem, 5vw, 3rem);
+   font-weight: 700;
+  color: #000000;
+  
+  
 }
 
 .numeros_container {
@@ -570,14 +608,14 @@ form h2::after {
 .grafico-item {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(235, 89, 89, 0.1);
   padding: 20px;
   width: 300px;
   transition: transform 0.3s ease;
 }
 
 .grafico-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
 }
 
 .grafico-item h3 {
@@ -585,7 +623,9 @@ form h2::after {
   margin-bottom: 15px;
   color: #333;
 }
-
+.grafico-item i{
+  font-size: 30px;
+}
 .barra {
   height: 20px;
   background: #c40000;
@@ -627,7 +667,7 @@ form h2::after {
 }
 
 .hs-text h2 {
-  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-size:2.5rem;
   text-align: start;
   color: #1c1c1c;
   margin-bottom: 20px;
@@ -841,7 +881,7 @@ form h2::after {
   text-align: justify;
   padding: 20px;
 }
-.nossa_historia_container .text_nossa_historia .topo{
+ .topo{
   background-color: #c4000055;
  padding:2px 10px;
  display: flex;
@@ -857,7 +897,7 @@ form h2::after {
   font-size: 10px;
 }
 .nossa_historia_container .text_nossa_historia h1{
-  font-size:  clamp(2.5rem, 6vw, 3rem);
+  font-size:  2.5rem;
   font-weight: 600;
   display: flex;
   gap: 10px;
@@ -1022,10 +1062,11 @@ transform: rotate(10deg); /* Inclina 10 graus no sentido horário */
 .card_sobre_nos {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content:start;
   flex-direction: column;
   background-color: rgba(205, 57, 57, 0.15); /* vermelho meio transparente */
-  max-width: 500px;
+  max-width: 400px;
+  width: 100%;
   padding: 30px 30px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -1047,10 +1088,10 @@ transform: rotate(10deg); /* Inclina 10 graus no sentido horário */
 .card_int_sobreNos {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: start;
   gap: 20px;
   animation: fadeInLeft 1s ease-in;
-  width: 300px;
+    max-width: 300px;
   text-align: justify;
 }
 
