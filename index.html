@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HS EXPREX</title>
+  <title>HS EXPREX TRANSPORTES</title>
   <link rel="icon" href="assets/Logo.png" style="width: 40px; height: 40px" />
 
   <!-- Estilos -->
@@ -52,11 +52,11 @@
       <a href="#"><span>
           <h5><i class="fa-solid fa-house"></i> Início</h5>
         </span></a>
-      <a href="#">
+      <a href="#hs-section">
         <span>
           <h5><i class="fa-solid fa-users"></i>Quem somos</h5>
         </span></a>
-      <a href="#">
+      <a href="#servicos">
         <span>
           <h5><i class="fa-solid  fa-truck-fast"></i>Nossos Serviços</h5>
         </span>
@@ -96,9 +96,9 @@
         <div class="hs-text">
           <h2>HS EXPREX <span style=" background: linear-gradient(to right, red, rgb(154, 2, 2));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; font-weight: bold;   font-size: clamp(2.5rem, 6vw, 3.5rem);">TRANSPORTES</span>
+  -webkit-text-fill-color: transparent; font-weight: bold;">TRANSPORTES</span>
           </h2>
-          <p>
+          <p style="font-weight: 600;">
             A HS EXPREX TRANSPORTES é referência em soluções logísticas
             inteligentes e seguras. Com frota moderna, equipe especializada e
             tecnologia de rastreamento, oferecemos transporte rodoviário com
@@ -131,12 +131,13 @@
           <img class="hs_image_img" src="assets/caminhao01.com.png" alt="Caminhão em estrada" />
         </div>
       </div>
+
     </section>
     <!-- SERVIÇOS -->
     <section class="servicos" id="servicos">
       <div class="servicos_content">
-        <span class="topo" style="margin-bottom: -15px;"><i class="fa fa-circle"></i>
-          Serviços</span>
+        <span class="topo" style="margin-bottom: -15px;font-size: 1rem;"><i class="fa fa-circle"></i>
+          Nossos Serviços</span>
         <h1>Soluções <span style=" background: linear-gradient(to right, red, rgb(154, 2, 2));
   -webkit-background-clip: text;  font-size:2.5rem;
   -webkit-text-fill-color: transparent; font-weight: bold;">Inovadoras</span></h1>
@@ -193,7 +194,7 @@
     <section class="nossa_historia_container">
 
       <div class="text_nossa_historia">
-        <span class="topo"><i class="fa fa-circle"></i>
+        <span class="topo" style="font-size: 1rem;"><i class="fa fa-circle"></i>
           Nossa História</span>
 
         <h1>O Futuro <span style="color: red;  font-size:2.5rem;"> Começou</span></h1>
@@ -334,7 +335,7 @@
               <!-- E-mail -->
               <div class="card_int_sobreNos">
                 <div class="efect_content">
-                  
+
                   <i class="fas fa-envelope" style="background-color: rgb(53, 195, 31)
                   "></i>
                 </div>
@@ -349,10 +350,49 @@
 
         <!-- Texto Institucional -->
         <div class="div_group_text_sobre_nos">
-          <h2>
-            Conectamos sua empresa aos destinos certos com
-            <span>agilidade e segurança</span>
+          <h2 id="typing">
+
           </h2>
+          <script>
+
+          const text = "Conectamos sua empresa aos destinos certos, com <span style='color:red;'>agilidade e segurança!</span>";
+let i = 0;
+let started = false;
+let isTag = false;
+let html = "";
+
+function typeWriter() {
+  if (i < text.length) {
+    let char = text[i];
+
+    if (char === "<") isTag = true;
+    if (char === ">") isTag = false;
+
+    html += char;
+    i++;
+
+    document.getElementById("typing").innerHTML = html;
+
+    setTimeout(typeWriter, isTag ? 0 : 50); // sem delay dentro das tags
+  }
+}
+
+function checkScroll() {
+  const section = document.querySelector(".div_group_text_sobre_nos");
+  const position = section.getBoundingClientRect();
+
+  if (position.top < window.innerHeight && !started) {
+    started = true;
+    typeWriter();
+    window.removeEventListener("scroll", checkScroll);
+  }
+}
+
+window.addEventListener("scroll", checkScroll);
+
+
+
+          </script>
           <p class="subtitle_sobre_nos">
             A <strong>HS EXPREX TRANSPORTES</strong> é sua parceira estratégica em transporte rodoviário.
             Atendemos empresas de todos os portes com soluções logísticas eficientes, atendimento ágil
@@ -365,7 +405,7 @@
 
 
     <section class="numeros_empresa" id="numeros">
-      <span class="topo" style="margin-bottom: -15px;"><i class="fa fa-circle"></i>
+      <span class="topo" style="margin-bottom: -15px; font-size: 1rem;"><i class="fa fa-circle"></i>
         Nossos Números</span>
       <h2>Potência em <span style=" background: linear-gradient(to right, red, rgb(154, 2, 2));
   -webkit-background-clip: text;
