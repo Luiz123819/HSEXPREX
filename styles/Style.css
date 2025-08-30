@@ -1,21 +1,24 @@
 /* VARS */
-:root{
-  --color--01:#f7f7f7;
-  --color--02:rgb(150, 137, 137);
-  --color--03:rgb(53, 53, 53);
-  --color--04:rgb(255, 0, 0);
+:root {
+  --color--01: #f7f7f7;
+  --color--02: rgb(150, 137, 137);
+  --color--03: rgb(53, 53, 53);
+  --color--04: rgb(255, 0, 0);
 }
-*{
-margin:0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, Helvetica, sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.container{
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    background-color: rgb(255, 255, 255);
+
+.container {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-color: rgb(255, 255, 255);
 
 }
+
 .whatsapp-button {
   position: fixed;
   bottom: 50px;
@@ -150,14 +153,16 @@ font-family: Arial, Helvetica, sans-serif;
 
 /* Responsividade extra */
 @media (max-width: 768px) {
-  .hs-text h2  {
-  font-size: 1.8rem !important;
+  .hs-text h2 {
+    font-size: 1.8rem !important;
     margin: 50px 0px !important;
 
-}
- .hs-text h2 span{
-  font-size: 1.8rem !important;
- }
+  }
+
+  .hs-text h2 span {
+    font-size: 1.8rem !important;
+  }
+
   .banner_content h1 {
     font-size: 2rem;
   }
@@ -165,13 +170,15 @@ font-family: Arial, Helvetica, sans-serif;
   .banner_content span {
     font-size: 1rem;
   }
-  .banner_buttons{
+
+  .banner_buttons {
     flex-direction: column;
-     width: 100% !important;
+    width: 100% !important;
   }
+
   .banner_buttons button {
     width: 100% !important;
-    
+
   }
 }
 
@@ -183,7 +190,7 @@ font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
- 
+
 }
 
 .servicos_content {
@@ -196,7 +203,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .servicos h1 {
-  font-size:2.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
   color: #333;
@@ -215,28 +222,32 @@ font-family: Arial, Helvetica, sans-serif;
   background-color: red;
   border-radius: 2px;
 }
+
 .numeros_empresa h2 {
-  font-size:2.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
   color: #333;
   position: relative;
   padding-bottom: 10px;
 }
-@media screen  and (max-width: 768px){
+
+@media screen and (max-width: 768px) {
+
   .numeros_empresa h2,
   .numeros_empresa h2 span,
   .servicos_content h1,
   .servicos_content h1 span,
   .text_nossa_historia h1,
-  .text_nossa_historia h1 span
-  {
+  .text_nossa_historia h1 span {
     font-size: 2rem !important;
   }
-  .topo i{
-    font-size: 10px ;
+
+  .topo i {
+    font-size: 10px;
   }
 }
+
 .numeros_empresa h2::after {
   content: "";
   position: absolute;
@@ -254,7 +265,7 @@ font-family: Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   text-align: center;
   font-weight: 600;
-   color: rgb(124, 124, 124);
+  color: rgb(124, 124, 124);
   max-width: 800px;
 }
 
@@ -284,13 +295,15 @@ font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
   outline: none;
 }
-.icons_card{
-  width:100%;
+
+.icons_card {
+  width: 100%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
-.icons_card span{
+
+.icons_card span {
   background-color: #1ebe5e98;
   height: 24px;
   display: flex;
@@ -300,24 +313,30 @@ font-family: Arial, Helvetica, sans-serif;
   padding: 10px;
   border-radius: 20px;
   color: #ffffff;
- 
- font-size: 13px;
+
+  font-size: 13px;
   animation: pulse2 1s infinite;
 }
+
 @keyframes pulse2 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
 
   }
+
   50% {
     transform: scale(1.1);
   }
-  
+
 }
-.icons_card span i{
+
+.icons_card span i {
   font-size: 15px;
 
 }
+
 .servicos_card:hover,
 .servicos_card:focus {
   transform: scale(1.03);
@@ -367,18 +386,20 @@ font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 600;
 }
-section.orcamento{
+
+section.orcamento {
   height: auto;
-  
+
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 40px ;
+  gap: 40px;
 }
+
 form h2 {
-margin-bottom: 100px;
+  margin-bottom: 100px;
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
@@ -388,7 +409,7 @@ margin-bottom: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
- gap: 10px;
+  gap: 10px;
 }
 
 form h2::after {
@@ -403,6 +424,7 @@ form h2::after {
   background-color: red;
   border-radius: 2px;
 }
+
 .orcamento span {
   font-size: 1.25rem;
   text-align: center;
@@ -410,22 +432,25 @@ form h2::after {
   color: #3e3e3e;
   max-width: 800px;
 }
-.section_img_form{
+
+.section_img_form {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
-  
+
   flex-wrap: wrap;
 
 }
-.section_img_form img{
+
+.section_img_form img {
   width: 600px;
   height: 650px;
   background: linear-gradient(to right, red, rgb(170, 11, 11));
   border-radius: 0px 14px 14px 0px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 
 }
+
 .form-orcamento {
   max-width: 500px;
   height: 650px;
@@ -433,7 +458,7 @@ form h2::after {
   padding: 30px;
   background: #f9f9f9;
   border-radius: 10px 0px 0px 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -501,6 +526,7 @@ form h2::after {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(172, 6, 6, 0.5);
 }
+
 /* Estilo geral da seção */
 .sobre_nos {
 
@@ -514,7 +540,7 @@ form h2::after {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
- 
+
   max-width: 1200px;
   margin: 0 auto;
   gap: 40px;
@@ -546,25 +572,26 @@ form h2::after {
   font-weight: 700;
   margin-bottom: 20px;
   text-align: justify;
- color: #666666;
-}
-@media screen and (max-width: 768px){
-   
-
- .div_group_text_sobre_nos h2 {
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-  font-size: 2rem !important;
-  line-height: 1.6;
-  word-spacing: 0.05em;
-  max-width: 800px;
-  margin: 50px auto;
+  color: #666666;
 }
 
- .div_group_text_sobre_nos h2 span{
-  font-size: 2rem !important;
- }
+@media screen and (max-width: 768px) {
+
+
+  .div_group_text_sobre_nos h2 {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    font-size: 2rem !important;
+    line-height: 1.6;
+    word-spacing: 0.05em;
+    max-width: 800px;
+    margin: 50px auto;
+  }
+
+  .div_group_text_sobre_nos h2 span {
+    font-size: 2rem !important;
+  }
 }
 
 
@@ -581,22 +608,24 @@ form h2::after {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .subtitle_servicos{
+  .subtitle_servicos {
     text-align: justify;
   }
-.sobre_nos {
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-   
-}
+
+  .sobre_nos {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
   .sobre_nos_content {
- 
-   max-width: 400px;
-   align-items: center;
+
+    wid
+    align-items: center;
     flex-direction: column;
-    text-align:justify;
+    text-align: justify;
   }
 
 
@@ -606,7 +635,7 @@ form h2::after {
   }
 }
 
-    .numeros_empresa {
+.numeros_empresa {
   padding: 60px 20px;
 
   text-align: center;
@@ -618,18 +647,20 @@ form h2::after {
 }
 
 .numeros_empresa h2 {
-   font-size: clamp(2.2rem, 5vw, 3rem);
-   font-weight: 700;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 700;
   color: #000000;
-  
-  
+
+
 }
-.numeros_empresa span{
+
+.numeros_empresa span {
   font-size: 1.25rem;
   text-align: center;
   font-weight: 600;
-   color: rgb(124, 124, 124);
+  color: rgb(124, 124, 124);
 }
+
 .numeros_container {
   display: flex;
   flex-wrap: wrap;
@@ -655,9 +686,11 @@ form h2::after {
   margin-bottom: 15px;
   color: #333;
 }
-.grafico-item i{
+
+.grafico-item i {
   font-size: 30px;
 }
+
 .barra {
   height: 20px;
   background: #c40000;
@@ -670,7 +703,7 @@ form h2::after {
 
 
 
-   .hs-section {
+.hs-section {
 
 
 
@@ -682,7 +715,7 @@ form h2::after {
 }
 
 .hs-container {
-   
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -703,7 +736,7 @@ form h2::after {
 
 .hs-text h2 {
   max-width: ;
-  font-size:2.2rem;
+  font-size: 2.2rem;
   text-align: start;
   color: #1c1c1c;
   margin-bottom: 20px;
@@ -803,13 +836,14 @@ form h2::after {
   }
 
   .hs-text ul li i {
-    
-      padding: 1.3rem 2rem;
+
+    padding: 1.3rem 2rem;
   }
+
   .efect_icon {
-  
-  height: 60px !important;
-  width: 73px;
+
+    height: 60px !important;
+    width: 73px;
 
   }
 }
@@ -829,14 +863,17 @@ form h2::after {
   background-color: #505050;
   font-size: 1em;
   cursor: pointer;
-  z-index: 10; /* elevado para ficar acima do efeito */
+  z-index: 10;
+  /* elevado para ficar acima do efeito */
 }
 
 #icon_01 {
   background-color: #ff0000;
   padding: 1.3rem 2rem;
-  z-index: 11; /* ainda mais alto se necessário */
-  position: relative; /* necessário para aplicar z-index */
+  z-index: 11;
+  /* ainda mais alto se necessário */
+  position: relative;
+  /* necessário para aplicar z-index */
 }
 
 .efect_content {
@@ -852,8 +889,10 @@ form h2::after {
   width: 73px;
   cursor: pointer;
   border-radius: 20px;
-  background-color: rgba(255, 0, 0, 0.28); /* vermelho translúcido */
-  z-index: 1; /* abaixo dos ícones principais */
+  background-color: rgba(255, 0, 0, 0.28);
+  /* vermelho translúcido */
+  z-index: 1;
+  /* abaixo dos ícones principais */
   animation: icon_efect_animation 2s infinite ease-in-out;
 }
 
@@ -864,10 +903,12 @@ form h2::after {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
+
   50% {
     transform: translate(-50%, -50%) scale(1.1);
     opacity: 0.7;
   }
+
   100% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
@@ -896,6 +937,7 @@ form h2::after {
     opacity: 0;
     transform: translateX(-40px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -907,6 +949,7 @@ form h2::after {
     opacity: 0;
     transform: translateX(40px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -914,23 +957,30 @@ form h2::after {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
 
   }
+
   50% {
     transform: scale(1.2);
   }
-  
+
 }
+
 @keyframes icon_efect_animation {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0;
   }
+
   50% {
-   opacity: 1;
+    opacity: 1;
   }
-  
+
 }
 
 /* Responsivo */
@@ -940,8 +990,9 @@ form h2::after {
     text-align: center;
     max-height: 1300px;
   }
-  .numeros_empresa span{
-    text-align:justify !important;
+
+  .numeros_empresa span {
+    text-align: justify !important;
   }
 
   .hs-text {
@@ -953,13 +1004,13 @@ form h2::after {
   }
 }
 
-    
-.open{
+
+.open {
   display: block;
 }
 
 
-.nossa_historia_container{
+.nossa_historia_container {
   background: linear-gradient(rgba(27, 27, 27, 0.801), rgb(0, 0, 0));
   padding: 60px 20px;
   display: flex;
@@ -968,14 +1019,15 @@ form h2::after {
   flex-wrap: wrap;
   gap: 30px;
 }
-.nossa_historia_container .text_nossa_historia{
+
+.nossa_historia_container .text_nossa_historia {
   max-width: 500px;
   display: flex;
   align-items: start;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-    text-align: justify;
+  text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
 
@@ -984,49 +1036,55 @@ form h2::after {
   text-align: justify;
   padding: 20px;
 }
- .topo{
+
+.topo {
   background-color: #c4000055;
- padding:2px 10px;
- display: flex;
- align-items: center;
- justify-content: center;
- border-radius: 20px;
- gap: 10px;
- font-size: 15px;
- color: #ff0000;
- font-weight: 600;
+  padding: 2px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  gap: 10px;
+  font-size: 15px;
+  color: #ff0000;
+  font-weight: 600;
 
 }
 
- .topo i{
+.topo i {
   font-size: 10px;
-   animation: pulse infinite 1s ease-in-out;
+  animation: pulse infinite 1s ease-in-out;
 }
-.nossa_historia_container .text_nossa_historia h1{
-  font-size:  2.5rem;
+
+.nossa_historia_container .text_nossa_historia h1 {
+  font-size: 2.5rem;
   font-weight: 600;
   display: flex;
   gap: 10px;
   color: #ffffff;
 }
-.nossa_historia_container .text_nossa_historia p{
+
+.nossa_historia_container .text_nossa_historia p {
   font-size: inherit;
   color: darkgray;
-  font-weight: 500;
+  font-weight: 600;
 }
-.nossa_historia_valores_cards_container{
+
+.nossa_historia_valores_cards_container {
   display: flex;
   align-items: start;
   flex-direction: column;
   justify-content: center;
 }
-.nossa_historia_valores_cards_text{
+
+.nossa_historia_valores_cards_text {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
-.nossa_historia_valores_cards_text i{
+
+.nossa_historia_valores_cards_text i {
   padding: 1.2rem;
   background-color: #b30000;
   display: flex;
@@ -1036,57 +1094,67 @@ form h2::after {
   color: rgb(255, 255, 255);
   font-weight: 600;
 }
-.nossa_historia_valores_cards_text h3{
+
+.nossa_historia_valores_cards_text h3 {
   font-size: 1.3rem;
   font-weight: 600;
   color: rgb(255, 255, 255);
-  margin-bottom: -2px;
+
 }
-.nossa_historia_valores_cards_text p{
+
+.nossa_historia_valores_cards_text p {
   font-size: 1rem;
- 
+
 }
-.quadros_nossa_historia{
+
+.quadros_nossa_historia {
   display: flex;
   gap: 30px;
   justify-content: center;
- flex-wrap: wrap;
+  flex-wrap: wrap;
   align-items: center;
 }
-.quadros_nossa_historia .quadro{
+
+.quadros_nossa_historia .quadro {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.quadros_nossa_historia .quadro h2{
+
+.quadros_nossa_historia .quadro h2 {
   font-size: 2rem;
   font-weight: bold;
 
 }
-.quadros_nossa_historia .quadro span{
+
+.quadros_nossa_historia .quadro span {
   font-size: 1rem;
   color: #ccc;
   font-weight: 600;
 }
-.card_nossa_historia_container{
+
+.card_nossa_historia_container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 25px;
   position: relative;
 }
-.card_back{
-position: absolute;
-background-color: #5f2424bf;
-border-radius: 20px;
-width: 100%;
-height: 100%;
-z-index: 2;
-transform: rotate(10deg); /* Inclina 10 graus no sentido horário */
+
+.card_back {
+  position: absolute;
+  background-color: #5f2424bf;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transform: rotate(10deg);
+  /* Inclina 10 graus no sentido horário */
 }
-.card_front_nossa_historia{
-   position: relative;
+
+.card_front_nossa_historia {
+  position: relative;
   z-index: 1000;
   padding: 20px;
   border-radius: 20px;
@@ -1098,7 +1166,8 @@ transform: rotate(10deg); /* Inclina 10 graus no sentido horário */
   gap: 20px;
   background-color: #3b3b3bb3;
 }
-.card_front_nossa_historia #topo_card{
+
+.card_front_nossa_historia #topo_card {
   background-color: #ff000090;
   width: 100%;
   font-size: 1rem;
@@ -1112,23 +1181,27 @@ transform: rotate(10deg); /* Inclina 10 graus no sentido horário */
 
   gap: 5px;
 }
-.card_front_nossa_historia #topo_card i{
+
+.card_front_nossa_historia #topo_card i {
   font-size: 8px;
 }
-.card_front_nossa_historia h2{
- 
+
+.card_front_nossa_historia h2 {
+
   font-size: 1.2rem;
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
-.card_front_nossa_historia_group_content{
+
+.card_front_nossa_historia_group_content {
   display: flex;
   align-items: center;
   justify-content: start;
-  gap:25px;
+  gap: 25px;
 
 }
-.card_front_nossa_historia_group_content i{
+
+.card_front_nossa_historia_group_content i {
   font-size: 20px;
   padding: 1rem 1.2rem;
   background-color: #505050;
@@ -1139,14 +1212,17 @@ transform: rotate(10deg); /* Inclina 10 graus no sentido horário */
   align-items: center;
   justify-content: center;
 }
-.card_front_nossa_historia_group_content h2{
+
+.card_front_nossa_historia_group_content h2 {
   font-size: 1rem;
   margin-bottom: -2px;
 }
-.card_front_nossa_historia_group_content span{
+
+.card_front_nossa_historia_group_content span {
   color: #505050;
 }
-.rodape_card_nossa_historia{
+
+.rodape_card_nossa_historia {
   width: 100%;
   height: 100px;
   background-color: #ff000048;
@@ -1156,22 +1232,24 @@ transform: rotate(10deg); /* Inclina 10 graus no sentido horário */
   justify-content: center;
   padding: 20px;
 }
-.rodape_card_nossa_historia h2{
+
+.rodape_card_nossa_historia h2 {
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-.rodape_card_nossa_historia span{
+.rodape_card_nossa_historia span {
   font-size: 1rem;
   font-weight: 600;
 }
+
 .card_sobre_nos {
   display: flex;
   align-items: center;
-  justify-content:start;
+  justify-content: start;
   flex-direction: column;
 
-backdrop-filter: blur(300px);
+  backdrop-filter: blur(300px);
 
   max-width: 400px;
   border: 1px solid rgb(192, 192, 192);
@@ -1236,15 +1314,16 @@ backdrop-filter: blur(300px);
   font-weight: 500;
   color: #a3a3a3;
 
- 
+
 }
 
 .card_sobre_nos_content h2 {
-  font-size:1.7rem;
+  font-size: 1.7rem;
   font-weight: 700;
-background: linear-gradient(to right, rgb(182, 171, 171), rgb(92, 92, 92));
-  -webkit-background-clip: text;  
-  -webkit-text-fill-color: transparent; font-weight: bold;
+  background: linear-gradient(to right, rgb(182, 171, 171), rgb(92, 92, 92));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -1254,6 +1333,7 @@ background: linear-gradient(to right, rgb(182, 171, 171), rgb(92, 92, 92));
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1265,6 +1345,7 @@ background: linear-gradient(to right, rgb(182, 171, 171), rgb(92, 92, 92));
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -1275,6 +1356,7 @@ background: linear-gradient(to right, rgb(182, 171, 171), rgb(92, 92, 92));
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
