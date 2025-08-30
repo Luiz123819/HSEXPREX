@@ -31,25 +31,24 @@ overlay.addEventListener('click', () => {
 
 
 document.getElementById("form_whats").addEventListener('submit', function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const nome = document.getElementById("nome").value;
-    const empresa = document.getElementById("empresa").value;
-    const contato = document.getElementById("contato").value;
-    const email = document.getElementById("email").value;
-    const boxServicos = document.getElementById("box-servicos").value;
+  const nome = document.getElementById("nome").value;
+  const empresa = document.getElementById("empresa").value;
+  const contato = document.getElementById("contato").value;
+  const email = document.getElementById("email").value;
+  const boxServicos = document.getElementById("box-servicos").value;
 
-    const text = `Olá, meu nome é ${nome}, represento a empresa ${empresa}.
-    Gostaria de solicitar um orçamento para o serviço de ${boxServicos}.
-    📞 Contato: ${contato}  
-    📧 E-mail: ${email}
-    Fico no aguardo das informações. Muito obrigado!
-    `;
-    const numero= '5511986125768';
+  const text = `Olá, meu nome é ${nome}, represento a empresa ${empresa}.
+Gostaria de solicitar um orçamento para o serviço de ${boxServicos}.
+📞Contato: ${contato}  
+📬E-mail: ${email}
+Fico no aguardo das informações. Muito obrigado!`;
+  const numero = '5511986125768';
 
-    const url =`https://wa.me/${numero}?text=${encodeURIComponent(text)}`;
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(text)}`;
 
-    window.open(url, '_blank');
+  window.open(url, '_blank');
 
 
 })
@@ -71,7 +70,19 @@ const sr = ScrollReveal({
 // Lista de seletores que receberão o efeito
 const elementos = [
   '.hs_image_img',
-
+  '.hs-text',
+  '.li_hs',
+  '.servicos_card',
+  '.topo',
+  '.title',
+  '.subtitle_servicos',
+  '.text',
+  '.nossa_historia_valores_cards_text',
+  '.quadro',
+  '.card_sobre_nos',
+  '.subtitle_sobre_nos',
+  '.grafico-item',
+  '.orcamento'
 ];
 
 // Aplica o efeito a cada seletor
@@ -82,29 +93,19 @@ elementos.forEach(selector => {
 });
 
 
-  ScrollReveal().reveal('.grafico-item', {
-    origin: 'bottom',
-    distance: '40px',
-    duration: 1000,
-    opacity: 0,
-    scale: 0.95,
-    easing: 'ease-out',
-    interval: 200,
-    reset: false
-  });
 
-  // Animação das barras ao entrar na tela
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const barra = entry.target.querySelector('.barra');
-        const valor = barra.getAttribute('data-valor');
-        barra.style.width = valor;
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('.grafico-item').forEach(item => {
-    observer.observe(item);
+// Animação das barras ao entrar na tela
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const barra = entry.target.querySelector('.barra');
+      const valor = barra.getAttribute('data-valor');
+      barra.style.width = valor;
+    }
   });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.grafico-item').forEach(item => {
+  observer.observe(item);
+});
 

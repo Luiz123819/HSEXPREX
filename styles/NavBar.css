@@ -153,7 +153,7 @@ a .button_nav {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  z-index: 1000;
+  z-index: 9999;
   transform: translateX(100%);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -202,7 +202,7 @@ a .button_nav {
 }
 
 /* ===== OVERLAY ===== */
-.overlay {
+.overlay_menu{
   position: fixed;
   top: 0;
   left: 0;
@@ -211,11 +211,11 @@ a .button_nav {
   background-color: rgba(0,0,0,0.5);
   opacity: 0;
   visibility: hidden;
-  z-index: 999;
+  z-index: 8888;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.overlay.overlay_open {
+.overlay_open {
   opacity: 1;
   visibility: visible;
 }

@@ -240,7 +240,7 @@
   .servicos_content h1 span,
   .text_nossa_historia h1,
   .text_nossa_historia h1 span {
-    font-size: 2rem !important;
+    font-size: 1.9rem !important;
   }
 
   .topo i {
@@ -363,10 +363,11 @@
 .servicos_card h3 {
   font-size: 1.375rem;
   font-weight: 700;
-  color: #222;
+  color: #363636;
 }
 
 #subtitle_card {
+
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 10px;
@@ -375,6 +376,9 @@
 }
 
 .servicos_card p {
+  display: flex;
+  align-items: center;
+
   font-size: 0.95rem;
   font-weight: 500;
   color: rgb(76, 76, 76);
@@ -382,9 +386,13 @@
 }
 
 .servicos_card p i {
-  color: #25D366;
-  font-size: 1rem;
+  color: #15c515;
+
+  font-size: 1.3rem;
   font-weight: 600;
+
+
+
 }
 
 section.orcamento {
@@ -401,9 +409,7 @@ section.orcamento {
 form h2 {
   margin-bottom: 100px;
   font-size: 2rem;
-  font-weight: 600;
-  text-align: center;
-  color: #333;
+  font-weight: 6 #333;
   position: relative;
   padding-bottom: 10px;
   display: flex;
@@ -622,10 +628,7 @@ form h2::after {
 
   .sobre_nos_content {
 
-    wid
-    align-items: center;
-    flex-direction: column;
-    text-align: justify;
+   
   }
 
 
@@ -658,7 +661,7 @@ form h2::after {
   font-size: 1.25rem;
   text-align: center;
   font-weight: 600;
-  color: rgb(124, 124, 124);
+
 }
 
 .numeros_container {
@@ -735,7 +738,7 @@ form h2::after {
 }
 
 .hs-text h2 {
-  max-width: ;
+
   font-size: 2.2rem;
   text-align: start;
   color: #1c1c1c;
@@ -994,7 +997,7 @@ form h2::after {
   .numeros_empresa span {
     text-align: justify !important;
   }
-
+ 
   .hs-text {
     padding: 20px;
   }
@@ -1320,7 +1323,7 @@ form h2::after {
 .card_sobre_nos_content h2 {
   font-size: 1.7rem;
   font-weight: 700;
-  background: linear-gradient(to right, rgb(182, 171, 171), rgb(92, 92, 92));
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
