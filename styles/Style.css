@@ -13,7 +13,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .container{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(255, 255, 255);
 
 }
 .whatsapp-button {
@@ -702,6 +702,7 @@ form h2::after {
 }
 
 .hs-text h2 {
+  max-width: ;
   font-size:2.2rem;
   text-align: start;
   color: #1c1c1c;
@@ -939,7 +940,7 @@ form h2::after {
     text-align: center;
     max-height: 1300px;
   }
-  .numeros_empresa span{{
+  .numeros_empresa span{
     text-align:justify !important;
   }
 
@@ -974,6 +975,12 @@ form h2::after {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+    text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+
+  line-height: 1.6;
+  word-spacing: 0.05em;
   text-align: justify;
   padding: 20px;
 }
@@ -1163,7 +1170,9 @@ transform: rotate(10deg); /* Inclina 10 graus no sentido horário */
   align-items: center;
   justify-content:start;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.589); 
+
+backdrop-filter: blur(300px);
+
   max-width: 400px;
   border: 1px solid rgb(192, 192, 192);
   width: 100%;

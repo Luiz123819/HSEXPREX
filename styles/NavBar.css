@@ -16,10 +16,13 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 90px;
-  padding: 10px 30px;
+height: 80px;
+  padding: 10px 20px;
   background: linear-gradient(to right, #fff, #f9f9f9);
   box-shadow: var(--shadow-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 9999;
   overflow: hidden;
 }
@@ -35,15 +38,23 @@ header {
 
 .nav_logo img {
   width: 100px;
-  height: auto;
-}
 
+}
+.menu_button_ul{
+  padding: 0;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 40px;
+}
 /* ===== NAV LINKS ===== */
 .nav_links {
+  margin: auto;
   display: flex;
   gap: 40px;
   list-style: none;
   align-items: center;
+  justify-content: center;
 }
 
 .nav_link_item a {
@@ -62,47 +73,48 @@ header {
   bottom: -4px;
   width: 0%;
   height: 4px;
-  background-color: var(--color-primary);
+  background-color: red;
+
   border-radius: 3px;
   transition: 0.5s ease-in-out;
 }
 
 .nav_link_item a:hover::after {
   width: 100%;
+ 
 }
-
+.nav_link_item a:hover{
+  color: red;
+}
 /* ===== WHATSAPP BUTTON ===== */
-.button_nav_whats {
+.button_nav {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   width: 240px;
-  height: 50px;
-  margin-top: 9px;
+  height: 40px;
+
   border: none;
   border-radius: 30px;
-  background-color: var(--color-whatsapp);
-  box-shadow: var(--shadow-medium);
+  background-color: rgb(212, 5, 5);
+box-shadow: 0px 4px 12px rgba(255, 0, 0, 0.4);
+
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
-.button_nav_whats:hover {
-  transform: scale(1.1);
-  background-color: var(--color-whatsapp-hover);
+.button_nav:hover {
+  transform: scale(1.01);
+  background-color:rgb(207, 5, 5);
+ 
 }
 
-.button_nav_whats i {
-  font-size: 30px;
-  font-weight: 600;
-  color: var(--color-light);
-}
 
-.button_nav_whats a {
+a  .button_nav {
   font-size: 17px;
   font-weight: 900;
-  color: var(--color-light);
+  color: white;
   text-decoration: none;
 }
 
@@ -145,7 +157,7 @@ header {
 /* ===== RESPONSIVO ===== */
 @media screen and (max-width: 768px) {
   .nav_links,
-  .button_nav_whats {
+  .button_nav{
     display: none;
   }
 
