@@ -4,13 +4,23 @@
 
 /* Telas grandes: desktops acima de 1200px */
 @media screen and (min-width: 1200px) {
-  /* Layout amplo, fontes maiores, espaçamento generoso */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Impede rolagem horizontal */
+  width: 100%;
+} /* Layout amplo, fontes maiores, espaçamento generoso */
 
 }
 
 /* Telas médias: laptops e tablets em paisagem (entre 992px e 1199px) */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  /* Ajustes para largura intermediária */
+  html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Impede rolagem horizontal */
+  width: 100%;
+}/* Ajustes para largura intermediária */
 }
 
 /* Telas pequenas: tablets em retrato e celulares grandes (entre 768px e 991px) */
@@ -41,12 +51,22 @@
   }
 
 
-
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Impede rolagem horizontal */
+  width: 100%;
+}
 }
 
 /* Telas muito pequenas: celulares padrão (até 767px) */
 @media screen and (max-width: 767px) {
-
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Impede rolagem horizontal */
+  width: 100%;
+}
   /* Menu mobile, empilhamento de elementos, botões maiores */
   * {
     font-size: 17px;
@@ -84,14 +104,14 @@
   form {
     max-width: 600px;
     max-height: 1000px;
-    padding: 10px 20px !important;
+    padding: 30px 20px !important;
     border-radius: 10px !important;
   }
 
   form h2 {
-
+    margin-bottom: 30px !important ;
     width: 100%;
-    font-size: 30px !important;
+    font-size:1.6rem !important;
   }
 
   form h2 i {
@@ -157,10 +177,20 @@ padding: 0;
 
 /* Telas extra pequenas: celulares compactos (até 480px) */
 @media screen and (max-width: 480px) {
-  /* Fontes menores, imagens otimizadas, layout vertical */
+  html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Impede rolagem horizontal */
+  width: 100%;
+}/* Fontes menores, imagens otimizadas, layout vertical */
 }
 
 /* Telas mínimas: dispositivos muito estreitos (até 320px) */
 @media screen and (max-width: 320px) {
-  /* Ajustes extremos para acessibilidade e legibilidade */
+  html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Impede rolagem horizontal */
+  width: 100%;
+}/* Ajustes extremos para acessibilidade e legibilidade */
 }

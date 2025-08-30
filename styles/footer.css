@@ -142,4 +142,7 @@ footer {
   .logo_text{
     width: 100%;
   }
+  .group_footer h2 {
+    font-size: 1.4rem;
+  }
 }
